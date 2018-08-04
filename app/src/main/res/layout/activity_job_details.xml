@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/jobDetailsAppbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_anchor="@+id/jobDetailsAppbar"
+            app:layout_anchorGravity="top|center">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/jobDetailsCollapsingToolbarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/collapsing_toolbar_height"
+                app:contentScrim="@color/primary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_collapseMode="parallax"
+                    tools:context=".activities.JobDetailsActivity" />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/jobDetailsToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:title="Job Details" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/job_details_activity_paddingBottom"
+                android:paddingLeft="@dimen/margin_medium"
+                android:paddingRight="@dimen/margin_medium">
+
+                <TextView
+                    android:id="@+id/tvjobDetailsDescriptionLabel"
+                    style="@style/job_detail_labels"
+                    android:text="@string/job_title_label" />
+
+                <TextView
+                    android:id="@+id/tvjobDetailsLocationLabel"
+                    style="@style/job_detail_labels"
+                    android:layout_below="@id/tvjobDetailsDescriptionLabel"
+                    android:text="@string/job_location_label" />
+
+                <TextView
+                    android:id="@+id/tvjobDetailsPaymentLabel"
+                    style="@style/job_detail_labels"
+                    android:layout_alignTop="@id/tvjobDetailsPayment"
+                    android:layout_below="@id/tvjobDetailsLocationLabel"
+                    android:layout_marginTop="0dp"
+                    android:text="@string/job_payment_label" />
+
+                <TextView
+                    android:id="@+id/tvjobDetailsPeriodLabel"
+                    style="@style/job_detail_labels"
+                    android:layout_below="@id/tvjobDetailsPaymentLabel"
+                    android:text="@string/job_period" />
+
+                <TextView
+                    android:id="@+id/tvjobDetailsVacancyLabel"
+                    style="@style/job_detail_labels"
+                    android:layout_below="@id/tvjobDetailsPeriodLabel"
+                    android:text="@string/job_vacancy_label" />
+
+                <TextView
+                    android:id="@+id/tvjobDetailPeriodColon"
+                    style="@style/job_detail_labels"
+                    android:layout_below="@id/tvjobDetailsPaymentLabel"
+                    android:layout_marginLeft="@dimen/margin_medium_3"
+                    android:layout_toRightOf="@id/tvjobDetailsPeriodLabel"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/tvjobDetailsDescription"
+                    style="@style/job_details_data"
+                    android:layout_toRightOf="@id/tvjobDetailsDescriptionLabel"
+                    android:text="To teach English Speaking" />
+
+                <TextView
+                    android:id="@+id/tvjobDetailsLocation"
+                    style="@style/job_details_data"
+                    android:layout_below="@id/tvjobDetailsDescription"
+                    android:layout_toRightOf="@id/tvjobDetailsLocationLabel"
+                    android:text="Pazuntaung" />
+
+                <TextView
+                    android:id="@+id/tvjobDetailsPayment"
+                    style="@style/job_details_data"
+
+                    android:layout_below="@id/tvjobDetailsLocation"
+                    android:layout_toRightOf="@id/tvjobDetailsPaymentLabel"
+                    android:text="15000MMK" />
+
+                <TextView
+                    android:id="@+id/tvjobDetailsPeriod"
+                    style="@style/job_details_data"
+                    android:layout_below="@id/tvjobDetailsPayment"
+                    android:layout_toRightOf="@id/tvjobDetailPeriodColon"
+                    android:text="15 days" />
+
+                <TextView
+                    android:id="@+id/tvjobDetailsVacancy"
+                    style="@style/job_details_data"
+                    android:layout_below="@id/tvjobDetailsPeriod"
+                    android:layout_toRightOf="@id/tvjobDetailsVacancyLabel"
+                    android:text="2 posts available" />
+
+                <TextView
+                    android:id="@+id/tvjobDetailsJobDescriptionTitle"
+                    style="@style/job_details_headings"
+                    android:layout_below="@id/tvjobDetailsVacancyLabel"
+                    android:text="@string/job_description_title" />
+
+                <TextView
+                    android:id="@+id/tvjobDetailsFullDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvjobDetailsJobDescriptionTitle"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:text="Teach English Speaking with short period of time for business purpose" />
+
+                <TextView
+                    android:id="@+id/tvJobDetailsRequirementsTitle"
+                    style="@style/job_details_headings"
+                    android:layout_below="@id/tvjobDetailsFullDescription"
+                    android:text="@string/job_requirements_title" />
+
+                <TextView
+                    android:id="@+id/tvRequiredSkill1"
+                    style="@style/job_required_skills"
+                    android:layout_below="@id/tvJobDetailsRequirementsTitle"
+                    android:text="Good at Teaching" />
+
+                <TextView
+                    android:id="@+id/tvRequiredSkill2"
+                    style="@style/job_required_skills"
+                    android:layout_below="@id/tvRequiredSkill1"
+                    android:text="Good at Driving" />
+
+                <TextView
+                    android:id="@+id/tvRequiredSkill3"
+                    style="@style/job_required_skills"
+                    android:layout_below="@id/tvRequiredSkill2"
+                    android:text="Good at Communication" />
+
+                <TextView
+                    android:id="@+id/tvImportantNotesHeading"
+                    style="@style/job_details_headings"
+                    android:layout_below="@id/tvRequiredSkill3"
+                    android:text="@string/job_details_important_notes" />
+
+                <TextView
+                    android:id="@+id/tvImportantNotes1"
+                    style="@style/job_required_skills"
+                    android:layout_below="@id/tvImportantNotesHeading"
+                    android:text="Will give a ride back home" />
+
+                <TextView
+                    android:id="@+id/tvImportantNotes2"
+                    style="@style/job_required_skills"
+                    android:layout_below="@id/tvImportantNotes1"
+                    android:text="Will provide a room with air condition" />
+
+                <TextView
+                    android:id="@+id/tvImportantNotes3"
+                    style="@style/job_required_skills"
+                    android:layout_below="@id/tvImportantNotes2"
+                    android:text="Will provide lunch" />
+
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.v7.widget.CardView
+            style="@style/sign_in_and_submit_button_card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sign_in_submit_button_height"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/margin_medium_2"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:layout_marginRight="@dimen/margin_medium_2">
+
+            <TextView
+                style="@style/sign_in_and_submit_button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/apply_button" />
+
+        </android.support.v7.widget.CardView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <include
+        android:id="@+id/vpEmpty"
+        layout="@layout/view_pod_empty"
+        android:visibility="gone" />
+
+</FrameLayout>

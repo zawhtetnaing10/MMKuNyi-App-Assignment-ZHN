@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_medium_2"
+    android:layout_marginTop="@dimen/margin_medium"
+    android:background="@android:color/white"
+    android:elevation="@dimen/margin_large"
+    app:cardCornerRadius="@dimen/margin_medium">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rlImageAndName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/applicant_view_holder_image_and_name_height"
+            android:background="@color/primary">
+
+            <ImageView
+                android:id="@+id/ivApplicant"
+                android:layout_width="@dimen/empty_image_size"
+                android:layout_height="@dimen/empty_image_size"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_medium_3"
+                android:scaleType="centerCrop"
+                android:src="@drawable/applicant_1" />
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tvApplicantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_medium_3"
+                android:layout_toRightOf="@id/ivApplicant"
+                android:text="David"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_regular_3x" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlImageAndName"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_small"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:padding="@dimen/margin_medium_2">
+
+                <TextView
+                    android:id="@+id/tvSkillsLabel"
+                    style="@style/job_details_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/skills_hint"
+                    android:textSize="@dimen/text_heading_1x" />
+
+                <TextView
+                    android:id="@+id/tvApplicantSkill1"
+                    style="@style/applicant_skills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvSkillsLabel"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:text="Good at house Keeping" />
+
+                <TextView
+                    android:id="@+id/tvApplicantSkill2"
+                    style="@style/applicant_skills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvApplicantSkill1"
+                    android:text="Good at Cleaning" />
+
+                <TextView
+                    android:id="@+id/tvApplicantSkill3"
+                    style="@style/applicant_skills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvApplicantSkill2"
+                    android:text="Good at Washing" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_small"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:padding="@dimen/margin_medium_2">
+
+                <TextView
+                    android:id="@+id/tvExperiencesLabel"
+                    style="@style/job_details_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/experiences_hint"
+                    android:textSize="@dimen/text_heading_1x" />
+
+                <TextView
+                    android:id="@+id/tvExperience1"
+                    style="@style/applicant_skills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvExperiencesLabel"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:text="- House Keeping" />
+
+                <TextView
+                    android:id="@+id/tvExperience2"
+                    style="@style/applicant_skills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvExperience1"
+                    android:text="- Washing" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

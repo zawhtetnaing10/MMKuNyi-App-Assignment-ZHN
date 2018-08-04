@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ProfileActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/profileAppbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/profileToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="@string/profile_toolbar_title" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rlUserInfo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_frame_layout_height">
+
+                <com.santalu.diagonalimageview.DiagonalImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/collapsing_toolbar_height"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/job_backdrop"
+                    android:tint="@color/tint_color"
+                    app:di_borderEnabled="true"
+                    app:di_direction="left"
+                    app:di_overlap="100dp"
+                    app:di_position="bottom" />
+
+                <ImageView
+                    android:id="@+id/ivProfilePic"
+                    android:layout_width="@dimen/profile_pic_size"
+                    android:layout_height="@dimen/profile_pic_size"
+                    android:layout_marginLeft="@dimen/margin_xxlarge"
+                    android:layout_marginTop="@dimen/proifile_pic_margin"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/zg_portrait" />
+
+                <TextView
+                    android:id="@+id/tvProfileEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="@dimen/margin_large"
+                    android:layout_marginRight="@dimen/margin_medium_2"
+                    android:text="zawhtetnaing1992@gmail.com"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/text_regular" />
+
+                <TextView
+                    android:id="@+id/tvProfileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/tvProfileEmail"
+                    android:layout_alignLeft="@id/tvProfileEmail"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:gravity="center"
+                    android:text="Zaw Htet Naing"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/text_regular_3x"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlProfileDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlUserInfo"
+                android:padding="@dimen/margin_medium_2">
+
+                <TextView
+                    android:id="@+id/tvAboutMeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="@string/about_me_label"
+                    android:textSize="@dimen/text_regular_3x" />
+
+                <View
+                    android:id="@+id/vFirstDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_below="@id/tvAboutMeLabel"
+                    android:background="@color/divider" />
+
+                <TextView
+                    android:id="@+id/profileGenderLabel"
+                    style="@style/job_detail_labels"
+                    android:layout_below="@id/vFirstDivider"
+                    android:text="@string/profile_gender_label" />
+
+                <TextView
+                    android:id="@+id/profileGender"
+                    style="@style/job_detail_labels"
+                    android:layout_below="@id/profileGenderLabel"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="Male" />
+
+                <TextView
+                    android:id="@+id/profileAgeLabel"
+                    style="@style/job_detail_labels"
+                    android:layout_alignTop="@id/profileGenderLabel"
+                    android:layout_marginLeft="@dimen/margin_xxlarge"
+                    android:layout_marginTop="0dp"
+                    android:layout_toRightOf="@id/profileGenderLabel"
+                    android:text="Age" />
+
+                <TextView
+                    android:id="@+id/profileAge"
+                    style="@style/job_detail_labels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/profileAgeLabel"
+                    android:layout_alignTop="@id/profileGender"
+                    android:layout_below="@id/profileAgeLabel"
+                    android:layout_marginTop="0dp"
+                    android:layout_toRightOf="@id/profileGender"
+                    android:text="25" />
+
+                <TextView
+                    android:id="@+id/profilePhoneNumberLabel"
+                    style="@style/job_detail_labels"
+                    android:layout_alignTop="@id/profileGenderLabel"
+                    android:layout_marginLeft="@dimen/margin_xxlarge"
+                    android:layout_marginTop="0dp"
+                    android:layout_toRightOf="@id/profileAgeLabel"
+                    android:text="Phone Number" />
+
+                <TextView
+                    style="@style/job_detail_labels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/profilePhoneNumberLabel"
+                    android:layout_alignTop="@id/profileGender"
+                    android:layout_below="@id/profilePhoneNumberLabel"
+                    android:layout_marginTop="0dp"
+                    android:layout_toRightOf="@id/profileAge"
+                    android:text="09791667996" />
+
+                <View
+                    android:id="@+id/vSecondDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_below="@id/profileGender"
+                    android:layout_marginTop="@dimen/margin_medium_3"
+                    android:background="@color/divider" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_medium_2"
+    android:clickable="true"
+    android:elevation="@dimen/margin_medium_3"
+    android:foreground="@drawable/ripple"
+    app:cardCornerRadius="@dimen/margin_medium">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin_medium_2">
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tvShortJobDescription"
+            style="@style/short_job_description"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="To Teach English Speaking" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tvFullJobDescription"
+            style="@style/full_job_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvShortJobDescription"
+            android:text="Teach english speaking with short term period for business purpose" />
+
+        <ImageView
+            android:id="@+id/ivPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tvSalary"
+            android:layout_below="@id/tvFullJobDescription"
+            android:src="@drawable/ic_attach_money_gray_14dp" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tvSalary"
+            style="@style/full_job_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvFullJobDescription"
+            android:layout_toRightOf="@id/ivPrice"
+            android:text="15000KS" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tvSalaryDuration"
+            style="@style/full_job_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvFullJobDescription"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_toRightOf="@id/tvSalary"
+            android:text="(per month)" />
+
+        <ImageView
+            android:id="@+id/ivLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/ivPrice"
+            android:layout_below="@id/tvFullJobDescription"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_toRightOf="@id/tvSalaryDuration"
+            android:src="@drawable/ic_location_on_gray_24dp" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tvLocation"
+            style="@style/full_job_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvFullJobDescription"
+            android:layout_toRightOf="@id/ivLocation"
+            android:maxLines="2"
+            android:text="Pazuntaung" />
+
+        <TextView
+            android:id="@+id/tvNumberOfPersonApplied"
+            style="@style/number_of_person_applied"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivPrice"
+            android:text="2 persons applied" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/btnApply"
+            style="@style/apply_and_save_button_card"
+            android:layout_width="@dimen/apply_button_width"
+            android:layout_height="@dimen/apply_button_height"
+            android:layout_below="@id/tvNumberOfPersonApplied"
+            android:layout_marginTop="@dimen/margin_medium">
+
+            <TextView
+                android:id="@+id/btnApplyText"
+                style="@style/sign_in_and_submit_button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/apply_button"
+                android:textSize="@dimen/text_regular" />
+
+        </android.support.v7.widget.CardView>
+
+        <FrameLayout
+            android:id="@+id/btnSave"
+            android:layout_width="@dimen/apply_button_width"
+            android:layout_height="@dimen/apply_button_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/btnApply"
+            android:layout_below="@id/tvNumberOfPersonApplied"
+            android:background="@drawable/save_button"
+            android:clickable="true"
+            android:foreground="@drawable/ripple_dark">
+
+            <TextView
+                android:id="@+id/btnSaveText"
+                style="@style/sign_in_and_submit_button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save_button"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/text_regular_2x" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

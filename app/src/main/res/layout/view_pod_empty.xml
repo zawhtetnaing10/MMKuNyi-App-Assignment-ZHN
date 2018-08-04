@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zawhtetnaing.mmkunyi_app_assignment_zhn.view.pods.EmptyViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_medium_3">
+
+    <ImageView
+        android:id="@+id/ivEmpty"
+        android:layout_width="@dimen/empty_image_size"
+        android:layout_height="@dimen/empty_image_size"
+        android:layout_centerInParent="true"
+        android:src="@drawable/notdatafound" />
+
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivEmpty"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:text="Oops! We're sorry!  No job available at the moment" />
+
+</com.zawhtetnaing.mmkunyi_app_assignment_zhn.view.pods.EmptyViewPod>

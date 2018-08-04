@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Generic with ratio -->
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_medium">8dp</dimen>
+    <dimen name="margin_medium_2">16dp</dimen>
+    <dimen name="margin_medium_3">20dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_xlarge">32dp</dimen>
+    <dimen name="margin_xxlarge">48dp</dimen>
+
+    <dimen name="margin_card_medium">6dp</dimen>
+    <dimen name="margin_card_medium_2">12dp</dimen>
+
+    <dimen name="margin_small_n">-4dp</dimen>
+    <dimen name="margin_card_medium_n">-6dp</dimen>
+    <dimen name="margin_medium_n">-8dp</dimen>
+    <dimen name="margin_card_medium_2_n">-12dp</dimen>
+    <dimen name="margin_medium_2_n">-16dp</dimen>
+    <dimen name="margin_medium_3_n">-18dp</dimen>
+    <dimen name="margin_large_n">-24dp</dimen>
+    <dimen name="margin_xlarge_n">-32dp</dimen>
+
+    <dimen name="text_smaller">10sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_regular">14sp</dimen>
+    <dimen name="text_regular_2x">16sp</dimen>
+    <dimen name="text_regular_3x">20sp</dimen>
+    <dimen name="text_heading_1x">24sp</dimen>
+    <dimen name="text_heading_2x">32sp</dimen>
+    <dimen name="text_big">40sp</dimen>
+    <dimen name="text_big_2x">60sp</dimen>
+    <dimen name="text_big_3x">80sp</dimen>
+
+    <!--App Specific-->
+    <dimen name="magnifying_glass_size">48dp</dimen>
+    <dimen name="margin_divider">12dp</dimen>
+    <dimen name="divider_height">2dp</dimen>
+    <dimen name="sign_in_submit_button_height">60dp</dimen>
+    <dimen name="apply_button_width">88dp</dimen>
+    <dimen name="apply_button_height">40dp</dimen>
+    <dimen name="collapsing_toolbar_height">250dp</dimen>
+    <dimen name="job_details_activity_paddingBottom">148dp</dimen>
+    <dimen name="empty_image_size">60dp</dimen>
+    <dimen name="profile_pic_size">80dp</dimen>
+    <dimen name="navigation_view_width">300dp</dimen>
+    <dimen name="navigation_view_layout_header_height">220dp</dimen>
+    <dimen name="logo_size">80dp</dimen>
+    <dimen name="circle_card_radius">1000dp</dimen>
+    <dimen name="applicant_view_holder_image_and_name_height">70dp</dimen>
+    <dimen name="profile_frame_layout_height">280dp</dimen>
+    <dimen name="proifile_pic_margin">188dp</dimen>
+</resources>
