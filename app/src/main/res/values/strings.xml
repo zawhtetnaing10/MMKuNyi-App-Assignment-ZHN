@@ -38,4 +38,10 @@
     <string name="profile_toolbar_title">Profile</string>
     <string name="about_me_label">About Me</string>
     <string name="profile_gender_label">Gender</string>
+    <string name="register_navigation_header">Register</string>
+    <string name="login_navigation_header">Login</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="account_control_toolbar_title">Welcome</string>
 </resources>

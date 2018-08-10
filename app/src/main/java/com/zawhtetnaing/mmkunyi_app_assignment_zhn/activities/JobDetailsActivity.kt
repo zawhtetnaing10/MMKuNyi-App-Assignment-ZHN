@@ -98,8 +98,6 @@ class JobDetailsActivity : AppCompatActivity(), OnMapReadyCallback {
                 }
 
             } catch (e: IOException) {
-                finish()
-                startActivity(intent)
             }
         }
     }

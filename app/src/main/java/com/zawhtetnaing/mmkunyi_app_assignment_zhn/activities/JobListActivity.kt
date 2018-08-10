@@ -13,17 +13,20 @@ import com.zawhtetnaing.mmkunyi_app_assignment_zhn.R
 import com.zawhtetnaing.mmkunyi_app_assignment_zhn.adapters.JobAdapter
 import com.zawhtetnaing.mmkunyi_app_assignment_zhn.data.models.JobsModel
 import com.zawhtetnaing.mmkunyi_app_assignment_zhn.data.vos.JobVO
+import com.zawhtetnaing.mmkunyi_app_assignment_zhn.delegates.BeforeLoginDelegate
 import com.zawhtetnaing.mmkunyi_app_assignment_zhn.delegates.JobDelegate
 import com.zawhtetnaing.mmkunyi_app_assignment_zhn.events.ApiErrorEvent
 import com.zawhtetnaing.mmkunyi_app_assignment_zhn.events.SuccessForceRefreshGetJobsEvent
 import com.zawhtetnaing.mmkunyi_app_assignment_zhn.events.SuccessGetJobsEvent
 import com.zawhtetnaing.mmkunyi_app_assignment_zhn.utils.MMKuNyiConstants
+import com.zawhtetnaing.mmkunyi_app_assignment_zhn.view.pods.AccountControlViewPod
+import com.zawhtetnaing.mmkunyi_app_assignment_zhn.view.pods.BeforeLogInViewPod
 import kotlinx.android.synthetic.main.activity_job_list.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 
-class JobListActivity : AppCompatActivity(), JobDelegate {
+class JobListActivity : AppCompatActivity(), JobDelegate, BeforeLoginDelegate {
 
     lateinit var mRecyclerAdapter: JobAdapter
 
@@ -88,6 +91,9 @@ class JobListActivity : AppCompatActivity(), JobDelegate {
             return@setNavigationItemSelectedListener true
         }
 
+        val vpAccountControl = navigationView.getHeaderView(0) as AccountControlViewPod
+        vpAccountControl.setDelegate(this)
+
         JobsModel.getInstance().loadNewJobs()
     }
 
@@ -107,6 +113,18 @@ class JobListActivity : AppCompatActivity(), JobDelegate {
     override fun onTapPersonsApplied(jobData: JobVO?) {
         val intent = Intent(applicationContext, ApplicantActivity::class.java)
         intent.putExtra(ApplicantActivity.APPLICANTS_EXTRA_KEY, jobData!!.jobPostId)
+        startActivity(intent)
+    }
+
+    override fun onTapLogin() {
+        val intent = Intent(applicationContext, AccountControlActivity::class.java)
+        intent.putExtra(AccountControlActivity.ACTION_TYPE, AccountControlActivity.ACTION_TYPE_LOGIN)
+        startActivity(intent)
+    }
+
+    override fun onTapRegister() {
+        val intent = Intent(applicationContext, AccountControlActivity::class.java)
+        intent.putExtra(AccountControlActivity.ACTION_TYPE, AccountControlActivity.ACTION_TYPE_REGISTER)
         startActivity(intent)
     }
 

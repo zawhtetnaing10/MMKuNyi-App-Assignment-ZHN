@@ -1,32 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activities.RegisterActivity">
+    android:layout_height="match_parent">
 
     <ImageView style="@style/backdrop_image" />
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/registerAppbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/registerToolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:title="@string/register_toolbar_title" />
-
-    </android.support.design.widget.AppBarLayout>
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:layout_height="match_parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -110,8 +91,16 @@
 
             </android.support.v7.widget.CardView>
 
+            <TextView
+                android:id="@+id/btnAlreadyLoggedIn"
+                style="@style/login_reminders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnRegister"
+                android:text="Already Logged In?" />
+
         </RelativeLayout>
 
     </ScrollView>
 
-</android.support.design.widget.CoordinatorLayout>
+</FrameLayout>

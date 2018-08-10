@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zawhtetnaing.mmkunyi_app_assignment_zhn.view.pods.AccountControlViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/navigation_view_layout_header_height">
+
+    <include
+        android:id="@+id/vpBeforeLogin"
+        layout="@layout/view_pod_before_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        android:id="@+id/vpLogin"
+        layout="@layout/view_pod_login_user"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</com.zawhtetnaing.mmkunyi_app_assignment_zhn.view.pods.AccountControlViewPod>

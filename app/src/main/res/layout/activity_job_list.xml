@@ -60,7 +60,7 @@
         android:layout_width="@dimen/navigation_view_width"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:headerLayout="@layout/view_pod_login_user"
+        app:headerLayout="@layout/view_pod_account_control"
         app:itemTextColor="@drawable/state_menu_item"
         app:menu="@menu/menu_left" />
 
